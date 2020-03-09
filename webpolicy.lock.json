@@ -1,0 +1,84 @@
+{
+  "revision_id": "d96b2a54cbecc29ebcc7e5d3c7d2c1d7e6f7175f40836083446973b3bb75c2b4",
+  "name": "webpolicy",
+  "run_list": [
+    "recipe[mywebserver::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "iis": {
+      "version": "7.3.0",
+      "identifier": "35c1f46fb4a07191281461a56874a6b9b7e84244",
+      "dotted_decimal_identifier": "15131429355954289.40857939625732212.183316584612420",
+      "cache_key": "iis-7.3.0",
+      "origin": "https://chef.automate-demo.com/organizations/automate",
+      "source_options": {
+        "chef_server": "https://chef.automate-demo.com/organizations/automate",
+        "version": "7.3.0"
+      }
+    },
+    "mywebserver": {
+      "version": "0.2.1",
+      "identifier": "f587dbda2af1ff4a79025673a2f1e2bfb431584c",
+      "dotted_decimal_identifier": "69110747621945855.20962199223902961.249312989763660",
+      "cache_key": "mywebserver-0.2.1",
+      "origin": "https://chef.automate-demo.com/organizations/automate",
+      "source_options": {
+        "chef_server": "https://chef.automate-demo.com/organizations/automate",
+        "version": "0.2.1"
+      }
+    },
+    "windows": {
+      "version": "6.0.1",
+      "identifier": "c2d8a6e691cef27556ff999e3c53a5393a12c102",
+      "dotted_decimal_identifier": "54844356826353394.33028228069080147.181665206026498",
+      "cache_key": "windows-6.0.1",
+      "origin": "https://chef.automate-demo.com/organizations/automate",
+      "source_options": {
+        "chef_server": "https://chef.automate-demo.com/organizations/automate",
+        "version": "6.0.1"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "iis",
+        "= 7.3.0"
+      ],
+      [
+        "mywebserver",
+        "= 0.2.1"
+      ],
+      [
+        "windows",
+        "= 6.0.1"
+      ]
+    ],
+    "dependencies": {
+      "iis (7.3.0)": [
+        [
+          "windows",
+          ">= 4.1.0"
+        ]
+      ],
+      "mywebserver (0.2.1)": [
+        [
+          "iis",
+          ">= 7.2.0"
+        ]
+      ],
+      "windows (6.0.1)": [
+
+      ]
+    }
+  }
+}
